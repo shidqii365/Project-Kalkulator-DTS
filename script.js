@@ -6,13 +6,6 @@ const updateScreen = (number) => {
 
 const numbers = document.querySelectorAll(".number")
 
-numbers.forEach((number) => {
-   number.addEventListener("click", (event) => {
-      updateScreen(event.target.value)
-   })
-})
-
-
 let prevNumber = ''
 let calculationOperator = ''
 let currentNumber = '0'
@@ -56,7 +49,7 @@ equalSign.addEventListener('click', () => {
 })
 
 const calculate = () => {
-   let result = ''
+   let result = '0'
    switch(calculationOperator) {
       case "+":
          result = parseFloat(prevNumber) + parseFloat(currentNumber)
@@ -79,7 +72,7 @@ const calculate = () => {
       default:
          return
    }
-   currentNumber = result
+   currentNumber = result.toString()
    calculationOperator = ''
 }
 

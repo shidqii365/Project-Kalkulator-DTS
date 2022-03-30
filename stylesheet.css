@@ -62,12 +62,12 @@ button {
   background-color: orange;
 }
 
-button:hover {
+button:active {
   background-color: darkgray;
 }
 
-.operator:hover,
-.equal-sign:hover {
+.operator:active,
+.equal-sign:active {
   background-color: darkturquoise;
 }
 
